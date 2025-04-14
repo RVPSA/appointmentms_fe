@@ -1,6 +1,17 @@
 {
     "signIn":{
-        "username":"username",
-        "password": "password"
+        "header":"Welcome Back",
+        "subHeader": "Sign in to manage appointments",
+        "userName":{
+            "labelName":"Email Address",
+            "placeHolder": "abc@gmail.com"
+        },
+        "password":{
+            "labelName":"Password",
+            "placeHolder":"*****"
+        },
+        "rememberMe":"Remember me",
+        "forgotPassword":"Forgot Password?",
+        "buttonText":"Log in"
     }
 }

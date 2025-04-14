@@ -1,12 +1,13 @@
+import LoginPage from "./pages/LoginPage";
 
 function App() {
-
-
   return (
     <>
-      <div className="text-4xl text-center">Appointment management system</div>
+      <div className="flex justify-center items-center bg-bgcolor p-48">
+        <LoginPage></LoginPage>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
