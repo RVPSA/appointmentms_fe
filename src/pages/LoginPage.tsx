@@ -62,12 +62,14 @@ const LoginPage = () => {
         <div className="text-xs font-extrabold">
           {t("signIn.userName.labelName")}
         </div>
-        <div className="flex flex-row rounded border p-2 h-8 border-gray">
-        <img src={email} alt="password" className="h-4 w-4 mr-0.5" />
+        <div className="flex flex-row rounded border p-2 h-10 border-gray">
+          <div className="w-full h-full flex items-center justify-center">
+            <img src={email} alt="password" className="h-4 w-4 mr-0.5" />
+          </div>
         <input
           type="text"
           placeholder={t("signIn.userName.placeHolder")}
-          className=""
+          className="outline-none py-1"
         ></input>
         </div>
         
