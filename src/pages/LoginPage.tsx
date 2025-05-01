@@ -4,6 +4,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../store/actions";
 import { email, password, stethoscope } from "../assets";
 import { useTranslation } from "react-i18next";
+import Button from "../components/Button";
 
 //<> Local type declarion area
 type LoginDetailsType = {
@@ -93,9 +94,7 @@ const LoginPage = () => {
         <div>{t("signIn.forgotPassword")}</div>
       </div>
       <div className="mt-3">
-        <div className="bg-darkblue text-center text-white p-1 rounded cursor-pointer">
-          <button className="cursor-pointer">{t("signIn.buttonText")}</button>
-        </div>
+        <Button title={t("signIn.buttonText")} onClick={()=>{}}></Button>
       </div>
     </div>
   );
