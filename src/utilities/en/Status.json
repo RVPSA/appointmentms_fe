@@ -1,0 +1,13 @@
+{
+  "status": {
+    "completed": "Completed",
+    "inProgress": "In-Progress",
+    "scheduled": "Scheduled",
+    "cancelled": "Cancelled",
+    "managed": "Managed",
+    "onGoing": "On-Going",
+    "normal": "Normal",
+    "attention": "Attention",
+    "critical": "Critical"
+  }
+}
