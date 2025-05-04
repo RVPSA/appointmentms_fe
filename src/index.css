@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "react-datepicker/dist/react-datepicker.css";
 @theme {
   --color-*: initial;
   --color-lightblue: #add8e6;
@@ -16,6 +16,8 @@
   --color-cancelledBackground: #fee2e1;
   --color-cancelledText: #882728;
   --color-completedText: #333a42;
+  --color-attentionBackground: #fef8c3;
+  --color-attentionText: #805d20;
 }
 
 /* :root {
