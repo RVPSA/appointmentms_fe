@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store/index.tsx";
 import i18next from "i18next";
 import signIn from "./utilities/en/signIn.json";
+import appointmentCard from "./utilities/en/AppointmentCard.json";
 import { I18nextProvider } from "react-i18next";
 
 // <> Language translation feature
@@ -15,6 +16,7 @@ i18next.init({
   resources: {
     en: {
       signIn: signIn,
+      appointmentCard: appointmentCard,
     },
   },
 });

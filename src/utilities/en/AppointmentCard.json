@@ -1,0 +1,8 @@
+{
+  "appointmentCard": {
+    "completed": "Completed",
+    "inProgress": "In-Progress",
+    "scheduled": "Scheduled",
+    "cancelled": "Cancelled"
+  }
+}
