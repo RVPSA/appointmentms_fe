@@ -1,7 +1,7 @@
 // import { useState } from "react";
 // import TimeSlot from "./components/TimeSlot";
-// import LoginPage from "./pages/LoginPage";
-// import AppointmentCard from "./components/AppointmentCard";
+import LoginPage from "./pages/LoginPage";
+import AppointmentCard from "./components/AppointmentCard/AppointmentCard";
 
 function App() {
   // const [selectedSlot, setSelectedSlot] = useState<number | undefined>();
@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center items-center bg-bgcolor w-full min-h-screen">
-        {/* <LoginPage></LoginPage> */}
+      <div className="bg-bgcolor w-full">
+        <LoginPage></LoginPage>
         {/* <TimeSlot time="05.00 AM" isDisabled={false} setSelectedTime={setTime} id = {0} selectedSlot = {selectedSlot}></TimeSlot>
         <TimeSlot time="05.00 AM" isDisabled={true} setSelectedTime={setTime} id = {1} selectedSlot = {selectedSlot}></TimeSlot>
         <TimeSlot time="05.00 AM" isDisabled={false} setSelectedTime={setTime} id = {2} selectedSlot = {selectedSlot}></TimeSlot> */}

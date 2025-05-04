@@ -2,9 +2,12 @@ import { useState } from "react";
 import { AppDispatch, RootState } from "../store";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { userLogIn } from "../store/actions";
-import { email, password, stethoscope } from "../assets";
+import { stethoscope } from "../assets";
 import { useTranslation } from "react-i18next";
-import Button from "../components/Button";
+import Button from "../components/Common/Button";
+import InputField from "../components/Common/InputField";
+import { TfiEmail } from "react-icons/tfi";
+import { PiPasswordThin } from "react-icons/pi";
 
 //<> Local type declarion area
 type LoginDetailsType = {
@@ -38,63 +41,66 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white p-5 rounded-xl shadow-2xl">
-      {/* //<> stethoscope Picture */}
-      <div className="w-full flex justify-center items-center">
-        <div className="h-14 w-14 rounded-full bg-lightblue flex justify-center items-center">
-          <img
-            src={stethoscope}
-            alt="stethoscope"
-            className="w-10 h-10 object-fill"
-          />
-        </div>
-      </div>
-
-      {/* //<> Welcome Back header */}
-      <div className="text-center font-extrabold text-2xl font-serif mt-3">
-        {t("signIn.header")}
-      </div>
-      {/* //<> Sub header */}
-      <div className="text-center px-3 font-medium text-xs mt-3">
-        {t("signIn.subHeader")}
-      </div>
-      {/* //<> Username field*/}
-      <div className="mt-5 flex gap-2 flex-col">
-        <div className="text-xs font-extrabold">
-          {t("signIn.userName.labelName")}
-        </div>
-        <div className="flex flex-row rounded border p-2 h-10 border-gray">
-          <div className="w-full h-full flex items-center justify-center">
-            <img src={email} alt="password" className="h-4 w-4 mr-0.5" />
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="flex flex-col bg-white p-5 rounded-xl shadow-2xl">
+        {/* //<> stethoscope Picture */}
+        <div className="w-full flex justify-center items-center">
+          <div className="h-14 w-14 rounded-full bg-lightblue flex justify-center items-center">
+            <img
+              src={stethoscope}
+              alt="stethoscope"
+              className="w-10 h-10 object-fill"
+            />
           </div>
-        <input
-          type="text"
-          placeholder={t("signIn.userName.placeHolder")}
-          className="outline-none py-1"
-        ></input>
         </div>
-        
-      </div>
-      {/* //<>Password */}
-      <div className="mt-4 flex gap-2 flex-col">
-        <div className="text-xs font-extrabold">
-          {t("signIn.password.labelName")}
+
+        {/* //<> Welcome Back header */}
+        <div className="text-center font-extrabold text-2xl font-serif mt-3">
+          {t("signIn.header")}
         </div>
-        <div className="flex flex-row rounded border p-2 h-8 border-gray">
-          <img src={password} alt="password" className="h-4 w-4 mr-0.5" />
-          <input
-            type="text"
-            placeholder={t("signIn.password.placeHolder")}
-            className=""
-          ></input>
+        {/* //<> Sub header */}
+        <div className="text-center px-3 font-medium text-xs mt-3">
+          {t("signIn.subHeader")}
         </div>
-      </div>
-      <div className="flex flex-row justify-between text-[11px] mt-3">
-        <div className="">{t("signIn.rememberMe")}</div>
-        <div>{t("signIn.forgotPassword")}</div>
-      </div>
-      <div className="mt-3">
-        <Button title={t("signIn.buttonText")} onClick={()=>{}}></Button>
+        {/* //<> Username field*/}
+        <div className="mt-5 flex gap-2 flex-col">
+          <div className="text-xs font-extrabold">
+            {t("signIn.userName.labelName")}
+          </div>
+          <div className="mt-2">
+            <InputField
+              type="text"
+              id="userName"
+              label={t("signIn.userName.placeHolder")}
+              onChange={() => {}}
+              hasImage={true}
+              icon={TfiEmail}
+            ></InputField>
+          </div>
+        </div>
+        {/* //<>Password */}
+        <div className="mt-4 flex gap-2 flex-col">
+          <div className="text-xs font-extrabold">
+            {t("signIn.password.labelName")}
+          </div>
+          <div className="mt-2">
+            <InputField
+              type="password"
+              id="password"
+              label={t("signIn.password.placeHolder")}
+              onChange={() => {}}
+              hasImage={true}
+              icon={PiPasswordThin}
+            ></InputField>
+          </div>
+        </div>
+        <div className="flex flex-row justify-between text-[11px] mt-3">
+          <div className="">{t("signIn.rememberMe")}</div>
+          <div>{t("signIn.forgotPassword")}</div>
+        </div>
+        <div className="mt-3">
+          <Button title={t("signIn.buttonText")} onClick={() => {}}></Button>
+        </div>
       </div>
     </div>
   );
