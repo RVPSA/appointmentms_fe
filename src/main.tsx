@@ -5,9 +5,13 @@ import App from "./App.tsx";
 import { Provider } from "react-redux";
 import store from "./store/index.tsx";
 import i18next from "i18next";
-import signIn from "./utilities/en/signIn.json";
-import status from "./utilities/en/Status.json";
-import appointmentBooking from "./utilities/en/Page/AppointmentBooking.json";
+import {
+  signIn,
+  status,
+  appointmentBooking,
+  appointmentVisible,
+  patientMedicalHistory,
+} from "./utilities/en/index.ts";
 import { I18nextProvider } from "react-i18next";
 
 // <> Language translation feature
@@ -19,6 +23,8 @@ i18next.init({
       signIn: signIn,
       status: status,
       appointmentBooking: appointmentBooking,
+      appointmentVisible: appointmentVisible,
+      patientMedicalHistory: patientMedicalHistory,
     },
   },
 });

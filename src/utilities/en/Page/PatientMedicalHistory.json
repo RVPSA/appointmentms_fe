@@ -1,0 +1,23 @@
+{
+  "header": "Patient Medical History",
+  "inputFieldLabel": "Patient's ID",
+  "searchButton": "Search",
+  "patientInformation": {
+    "header": "Patient Information",
+    "patientID": "Patient ID : ",
+    "age": "Age : ",
+    "name": "Name : ",
+    "gender": "Gender : "
+  },
+  "medicalCondition": {
+    "header": "Medical Conditions",
+    "diagnosed": "Diagnosed :"
+  },
+  "prescriptionHistory": {
+    "header": "Prescription History",
+    "dosage": "Dosage : ",
+    "prescibed": "Prescribed : ",
+    "duration": "Duration : ",
+    "months": " Months"
+  }
+}
