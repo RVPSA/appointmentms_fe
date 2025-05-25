@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import DatePicker from "react-datepicker";
 import { SlCalender } from "react-icons/sl";
 import { useState } from "react";
 import TimeSlot from "../components/Common/TimeSlot";
+import DateSelector from "../components/Common/DateSelector";
 
 const AppointmentBooking = () => {
   const [t] = useTranslation("appointmentBooking");
@@ -64,13 +64,12 @@ const AppointmentBooking = () => {
             <p className="text-xl font-medium">{t("datePlaceHolder")}</p>
           </div>
           <div className="m-2">
-            <DatePicker
+            <DateSelector
               selected={date}
-              className="border-1 border-gray rounded focus:outline-none focus:border-darkblue p-1 text-lg"
               onChange={(date) => setDate(date)}
               dateFormat="MMMM d, yyyy"
               filterDate={fileterPassedDate}
-            ></DatePicker>
+            ></DateSelector>
           </div>
           <div className="m-2 mb-5 text-xl font-medium">
             {t("timeSlotheader")}

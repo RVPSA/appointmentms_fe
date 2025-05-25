@@ -15,7 +15,7 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({
 }) => {
   return (
     <>
-      <div className=" w-full md:w-1/2 border-2 border-gray rounded-xl px-3 py-4">
+      <div className=" w-full border-2 border-gray rounded-xl px-3 py-4">
         <div className="flex flex-row justify-between">
           <div className="flex items-center gap-2">
             <CiClock2></CiClock2>
